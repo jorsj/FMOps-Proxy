@@ -23,10 +23,10 @@ docker build -t ai-api-proxy .
 ## Running locally
 
 ```bash
-uvicorn proxy:app --host 0.0.0.0 --port 8080 --reload
+uvicorn app:app --host 0.0.0.0 --port 8080 --reload
 ```
 
-This will start the application locally. Remember to update the proxy URLs in `proxy.py` if needed.
+This will start the application locally. Remember to update the proxy URLs in `app.py` if needed.
 
 ## Deployment to Cloud Run
 
@@ -65,7 +65,7 @@ POST https://your-cloud-run-url/vertexai/v1/projects/your-project-id/locations/u
 
 ## Configuration
 
-You can adjust the following settings in `proxy.py`:
+You can adjust the following settings in `app.py`:
 
 * `OPENAI_API_URL`: Base URL for the OpenAI API.
 * `VERTEX_API_URL`: Base URL for the Vertex AI API.
